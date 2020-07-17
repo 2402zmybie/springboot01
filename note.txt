@@ -1,0 +1,5 @@
+1 SpringBoot的属性注入:
+    文件名必须为application.properties
+
+
+

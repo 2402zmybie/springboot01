@@ -1,0 +1,25 @@
+#端口
+server:
+  port: 8088
+#DispatcherServlet配置过滤路径
+spring:
+  mvc:
+    servlet:
+      path: /
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/yun6?serverTimezone=UTC
+    username: root
+    password: 123456
+
+#日志级别控制
+logging:
+  level:
+    com.hr: debug
+#    org.springframework: info
+
+
+mybatis:
+  type-aliases-package: com.hr.springboot01.pojo
+#  mapper-locations: mapper/*.xml
+
