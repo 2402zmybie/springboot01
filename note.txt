@@ -2,4 +2,37 @@
     文件名必须为application.properties
 
 
+2 微服务的实现:
+    2.1 RPC和HTTP:
+    RPC: 远程过程调用,类似的还有RMI.自定义数据格式,基于原生的TCP通信,早期的webservice,现在热门的dubbo,都是RPC的典型代表
+    HTTP: 基于TCP,规定了数据传输格式,也可以用来远程服务调用,缺点是封装臃肿,优势是对服务的提供和调用方法没有任何限定,自由灵活,更符合微服务的概念
+          现在热门的Rest风格,就可以通过http协议来实现
+    如果你们公司全部采用Java技术栈,那么使用dubbo作为微服务架构是不错的选择
+    相反,如果技术栈多样化,而且你更青睐于Spring家族, 那么使用SpringCloud搭建微服务是不二之选,使用HTTP方式实现服务之间的调用
+
+3 HTTP客户端工具
+    既然微服务选择了HTTP,那么我们就需要考虑自己来实现对请求和响应的处理,不过开源世界已经有很多http的客户端工具,能够帮我们做这些事情
+    如: HttpClient(阿帕奇), OKHttp, HttpUrlConnection(JDK原生)
+    不过这些不同的客户端, API各不相同, 那么我们学习Spring的RestTemplate
+
+4 Spring的RestTemplate:
+    RestTemplate对基于HTTP的客户端进行了封装,并且实现了对象与json的序列化和反序列化,非常方便,RestTemplate并没有限定Http的
+    客户端类型,而是进行了抽象,目前常用的3种都有支持
+    HttpClient, OkHttp, JDK原生的HttpUrlConnecion(默认的)
+
+
+5 SpringCloud是Spring旗下的项目之一:
+    Netflix:
+        Eureka: 注册中心
+        Zuul: 服务网关
+        Ribbon: 负载均衡
+        Feign: 服务调用
+        Hystix: 熔断器
+
+
+
+
+
+
+
 
